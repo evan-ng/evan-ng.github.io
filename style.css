@@ -1,0 +1,106 @@
+:root {
+    --background: #111111;
+    --text-colour: #ffffff;
+
+    --regular-font: 'Montserrat', Arial, Helvetica, sans-serif;
+    --title-font: 'Dorsa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-colour);
+    display: grid;
+    grid-template: 1000px / 1fr 184px;
+    grid-template-areas: "sections navbar";
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--regular-font);
+}
+
+p {
+    font-family: var(--regular-font);
+}
+
+h1 {
+    font-family: var(--title-font);
+    letter-spacing: 4px;
+}
+
+.navbar {
+    grid-area: navbar;
+    text-align: right;
+}
+
+.nav-container {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list {
+    padding-right: 24px;
+}
+
+.nav-item {
+    font-weight: 100;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.nav-item.selected {
+    font-family: var(--title-font);
+    font-size: 48px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.sections {
+    grid-area: sections;
+}
+
+.about-section {
+    margin-top: 148px;
+    height: 100%;
+}
+
+.bio-name {
+    color: var(--background);
+    text-shadow: 
+        -1px -1px 0 var(--text-colour), 
+        1px -1px 0 var(--text-colour), 
+        -1px 1px 0 var(--text-colour), 
+        1px 1px 0 var(--text-colour);
+    font-size: 172px;
+}
+
+.bio-description {
+    margin-left: 24px;
+}
+
+.social-list {
+    font-weight: 100;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: flex;
+    margin: 24px 0px 24px 48px;
+    gap: 48px;
+}
