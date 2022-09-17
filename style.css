@@ -68,6 +68,7 @@ h1 {
 .nav-item {
     font-weight: 100;
     font-size: 16px;
+    font-size: clamp(16px, calc(2.5vw), 24px);
     text-transform: capitalize;
     padding: 1px;
 }
@@ -75,6 +76,7 @@ h1 {
 .nav-item.selected {
     font-family: var(--title-font);
     font-size: 48px;
+    font-size: clamp(48px, calc(7.5vw), 72px);
     margin-top: -6px;
     margin-bottom: -6px;
 }
@@ -97,7 +99,9 @@ h1 {
     opacity: 50%;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.25s ease;
+    -webkit-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    transition: transform 0.4s ease;
 }
 
 .selected.nav-link::after {
@@ -106,6 +110,10 @@ h1 {
     right: 12px;
     opacity: 100%;
     transform: scaleX(1);
+}
+
+.nav-link:hover {
+    font-weight: 300;
 }
 
 .nav-link:hover::after {
@@ -117,7 +125,7 @@ h1 {
 }
 
 .about-section {
-    padding-top: clamp(124px, calc(75vh - 48vw), 224px);
+    padding-top: clamp(124px, calc(75vh - 48vw), 200px);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -136,6 +144,14 @@ h1 {
     display: inline-block;
     white-space: nowrap;
     padding-left: 24px;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.bio-name:hover {
+    color: var(--text-colour);
+    text-shadow: none;
 }
 
 .bio-name::after {
@@ -170,4 +186,12 @@ h1 {
     display: flex;
     margin: 24px 0px 24px 48px;
     gap: 48px;
+}
+
+.social-link {
+    cursor: pointer;
+}
+
+.social-link:hover {
+    font-weight: 300;
 }
