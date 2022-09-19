@@ -238,6 +238,45 @@ h1, h2, h3 {
     box-shadow: -198px -1rem 0px -32px var(--text-colour);
 }
 
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100%;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.skill-sublist {
+    display: flex;
+    gap: clamp(24px, calc(8vw - 18px), 144px);
+}
+
+.skill-sublist:nth-child(odd) {
+    margin-left: clamp(24px, calc(8vw - 18px), 144px);
+}
+
+.skill-sublist:nth-child(even) {
+    margin-left: clamp(48px, calc(16vw - 36px), 288px);
+}
+
+.skill-item {
+    font-size: clamp(18px, calc(5vw - 16px), 28px);
+    font-weight: 300;
+    white-space: nowrap;
+    height: clamp(58px, calc(16.1vw - 51.5px), 90.2px);
+    line-height: clamp(58px, calc(16.1vw - 51.5px), 90.2px);
+}
+
+.skill-item:hover {
+    font-size: clamp(55px, calc(15.3vw - 48.8px), 85.5px);
+    font-family: var(--title-font);
+    font-weight: 340;
+    text-align: center;
+    vertical-align: middle;
+}
+
 /* PROJECTS */
 
 .projects-section {
@@ -256,6 +295,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    padding-left: clamp(0px, calc(38vw - 460px), 64px);
 }
 
 .project {
@@ -284,7 +324,7 @@ h1, h2, h3 {
     padding-top: 8px;
     font-family: var(--title-font);
     letter-spacing: 4px;
-    font-size: 48px;
+    font-size: clamp(48px, calc(24vw - 148px), 64px);
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -299,7 +339,7 @@ h1, h2, h3 {
 
 .project-lang {
     font-size: 18px;
-    font-weight: 340;
+    font-weight: 300;
 }
 
 .project-images {
@@ -393,8 +433,42 @@ h1, h2, h3 {
 /* CONTACT */
 
 .contact-section {
-    padding-top: clamp(48px, calc(25vh), 82px);
+    padding-top: clamp(64px, calc(33vh), 112px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.contact-text {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.contact-about {
+    font-size: clamp(24px, 4vw, 32px);
+    width: clamp(84px, 75vw - 84px, 644px);
+    margin: 48px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-transform: uppercase;
+    margin-left: 48px;
+    margin-bottom: 96px;
+}
+
+.contact-link {
+    font-size: clamp(12px, 3vw, 18px);
+    font-family: var(--regular-font);
+    font-weight: 200;
+    width: fit-content;
+}
+
+.contact-link:hover {
+    font-weight: 400;
 }
