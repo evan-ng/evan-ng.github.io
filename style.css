@@ -434,6 +434,7 @@ h1, h2, h3 {
 .contact-section {
     padding-top: clamp(64px, calc(33vh), 112px);
     min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
 }
