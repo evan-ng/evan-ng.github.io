@@ -220,7 +220,6 @@ h1, h2, h3 {
 }
 
 .heading {
-    font-size: 72px;
     font-size: clamp(90px, calc(12vw), 148px);
 }
 
@@ -437,6 +436,24 @@ h1, h2, h3 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.contact-heading {
+    padding-left: 32px;
+}
+
+.contact-heading::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: clamp(300px, calc(48vw), 660px);
+    height: 6px;
+    bottom: clamp(18px, calc(2.3vw), 30px);
+    right: clamp(52px, 9.2vw, 84px);
+    background-color: var(--text-colour);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.25s ease;
 }
 
 .contact-text {
